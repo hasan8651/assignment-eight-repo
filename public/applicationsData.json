@@ -1,0 +1,434 @@
+[
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "FocusFlow",
+    "companyName": "MindSpark Labs",
+    "id": 1,
+    "description": "Boost your concentration with elegant time tracking and deep-focus sessions.",
+    "size": 85,
+    "reviews": 2431,
+    "ratingAvg": 4.4,
+    "downloads": 158000,
+    "ratings": [
+      { "name": "1 star", "count": 125 },
+      { "name": "2 star", "count": 210 },
+      { "name": "3 star", "count": 390 },
+      { "name": "4 star", "count": 680 },
+      { "name": "5 star", "count": 1026 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/ksXn8xwL/Demo-app-2.webp",
+    "title": "NoteNest",
+    "companyName": "FeatherSoft",
+    "id": 2,
+    "description": "Organize your thoughts and projects in a colorful, shareable workspace.",
+    "size": 60,
+    "reviews": 3210,
+    "ratingAvg": 4.6,
+    "downloads": 284000,
+    "ratings": [
+      { "name": "1 star", "count": 98 },
+      { "name": "2 star", "count": 155 },
+      { "name": "3 star", "count": 410 },
+      { "name": "4 star", "count": 890 },
+      { "name": "5 star", "count": 1657 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "FitTrail",
+    "companyName": "TrailForge",
+    "id": 3,
+    "description": "Discover trails, track workouts, and share your adventures with a fitness community.",
+    "size": 120,
+    "reviews": 1150,
+    "ratingAvg": 4.1,
+    "downloads": 96000,
+    "ratings": [
+      { "name": "1 star", "count": 140 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 280 },
+      { "name": "4 star", "count": 310 },
+      { "name": "5 star", "count": 300 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "MealMuse",
+    "companyName": "ChefsCode",
+    "id": 4,
+    "description": "Generate delicious recipes from ingredients you already have at home.",
+    "size": 45,
+    "reviews": 890,
+    "ratingAvg": 4.7,
+    "downloads": 72000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 110 },
+      { "name": "4 star", "count": 270 },
+      { "name": "5 star", "count": 460 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "SleepSync",
+    "companyName": "DreamWare",
+    "id": 5,
+    "description": "Smart sleep analysis and peaceful soundscapes for better rest.",
+    "size": 76,
+    "reviews": 3050,
+    "ratingAvg": 4.5,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 130 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 360 },
+      { "name": "4 star", "count": 880 },
+      { "name": "5 star", "count": 1540 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "BudgetBee",
+    "companyName": "HiveTech",
+    "id": 6,
+    "description": "Track your expenses and savings effortlessly, with delightful charts.",
+    "size": 50,
+    "reviews": 1850,
+    "ratingAvg": 4.2,
+    "downloads": 142000,
+    "ratings": [
+      { "name": "1 star", "count": 130 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 370 },
+      { "name": "4 star", "count": 520 },
+      { "name": "5 star", "count": 650 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "StoryView",
+    "companyName": "LitPixel",
+    "id": 7,
+    "description": "Enjoy short fiction stories, customized to your interests and reading speed.",
+    "size": 88,
+    "reviews": 960,
+    "ratingAvg": 4.3,
+    "downloads": 82000,
+    "ratings": [
+      { "name": "1 star", "count": 65 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 170 },
+      { "name": "4 star", "count": 310 },
+      { "name": "5 star", "count": 335 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "MindDash",
+    "companyName": "NeuroFox",
+    "id": 8,
+    "description": "Daily brain games that stimulate memory, logic, and focus.",
+    "size": 63,
+    "reviews": 4350,
+    "ratingAvg": 4.6,
+    "downloads": 520000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 190 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 970 },
+      { "name": "5 star", "count": 2690 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "PlantPal",
+    "companyName": "GreenGrid",
+    "id": 9,
+    "description": "Monitor your houseplants’ health with watering reminders and sunlight tracking.",
+    "size": 70,
+    "reviews": 1640,
+    "ratingAvg": 4.8,
+    "downloads": 95000,
+    "ratings": [
+      { "name": "1 star", "count": 22 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 110 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 1163 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "LangLeap",
+    "companyName": "PolyLingo",
+    "id": 10,
+    "description": "Learn new languages through mini stories and live pronunciation feedback.",
+    "size": 95,
+    "reviews": 11200,
+    "ratingAvg": 4.7,
+    "downloads": 760000,
+    "ratings": [
+      { "name": "1 star", "count": 340 },
+      { "name": "2 star", "count": 410 },
+      { "name": "3 star", "count": 820 },
+      { "name": "4 star", "count": 2400 },
+      { "name": "5 star", "count": 7230 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "TravelTide",
+    "companyName": "GlobalSea",
+    "id": 11,
+    "description": "Find hidden gems and local events at your travel destinations.",
+    "size": 110,
+    "reviews": 3100,
+    "ratingAvg": 4.3,
+    "downloads": 245000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 410 },
+      { "name": "4 star", "count": 920 },
+      { "name": "5 star", "count": 1320 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "CookMate",
+    "companyName": "KitchenCrafters",
+    "id": 12,
+    "description": "Digital cookbook with smart meal planning and grocery integration.",
+    "size": 77,
+    "reviews": 530,
+    "ratingAvg": 4.5,
+    "downloads": 38000,
+    "ratings": [
+      { "name": "1 star", "count": 18 },
+      { "name": "2 star", "count": 25 },
+      { "name": "3 star", "count": 95 },
+      { "name": "4 star", "count": 150 },
+      { "name": "5 star", "count": 242 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "TaskTorch",
+    "companyName": "FlameWorks",
+    "id": 13,
+    "description": "Set goals and burn through your to-do list with streak-based motivation.",
+    "size": 52,
+    "reviews": 4100,
+    "ratingAvg": 4.4,
+    "downloads": 330000,
+    "ratings": [
+      { "name": "1 star", "count": 260 },
+      { "name": "2 star", "count": 280 },
+      { "name": "3 star", "count": 650 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 1710 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "ZenBrush",
+    "companyName": "CanvasWhisper",
+    "id": 14,
+    "description": "Relaxing drawing app with soothing sounds and brush-based aesthetics.",
+    "size": 90,
+    "reviews": 2100,
+    "ratingAvg": 4.9,
+    "downloads": 280000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 35 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 1540 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "RideReady",
+    "companyName": "MetroPulse",
+    "id": 15,
+    "description": "Live transit updates and commute scheduling, made friendly and simple.",
+    "size": 68,
+    "reviews": 7300,
+    "ratingAvg": 4.1,
+    "downloads": 840000,
+    "ratings": [
+      { "name": "1 star", "count": 700 },
+      { "name": "2 star", "count": 640 },
+      { "name": "3 star", "count": 890 },
+      { "name": "4 star", "count": 1900 },
+      { "name": "5 star", "count": 3170 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "TimeTally",
+    "companyName": "ChronoBits",
+    "id": 16,
+    "description": "Analytical time tracker that visualizes your productivity habits beautifully.",
+    "size": 54,
+    "reviews": 1200,
+    "ratingAvg": 4.5,
+    "downloads": 115000,
+    "ratings": [
+      { "name": "1 star", "count": 65 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 525 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "PetPatch",
+    "companyName": "Furwave",
+    "id": 17,
+    "description": "Track your pet’s health, vet visits, and adorable photo memories.",
+    "size": 48,
+    "reviews": 2280,
+    "ratingAvg": 4.6,
+    "downloads": 195000,
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 260 },
+      { "name": "4 star", "count": 550 },
+      { "name": "5 star", "count": 1280 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "ArtBoard",
+    "companyName": "SketchSpace",
+    "id": 18,
+    "description": "Collaborative design canvas for teams and freelance creators.",
+    "size": 130,
+    "reviews": 870,
+    "ratingAvg": 4.0,
+    "downloads": 47000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 280 },
+      { "name": "5 star", "count": 100 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "WeatherWing",
+    "companyName": "SkyLogic",
+    "id": 19,
+    "description": "Accurate forecasts with charming bird mascots, because why not?",
+    "size": 65,
+    "reviews": 2570,
+    "ratingAvg": 4.8,
+    "downloads": 180000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 480 },
+      { "name": "5 star", "count": 1730 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "ReadRipple",
+    "companyName": "PageStream",
+    "id": 20,
+    "description": "Social platform for sharing book reviews and discovering new reads.",
+    "size": 58,
+    "reviews": 710,
+    "ratingAvg": 4.3,
+    "downloads": 56000,
+    "ratings": [
+      { "name": "1 star", "count": 28 },
+      { "name": "2 star", "count": 44 },
+      { "name": "3 star", "count": 130 },
+      { "name": "4 star", "count": 210 },
+      { "name": "5 star", "count": 298 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "GoalGrid",
+    "companyName": "AspiraTech",
+    "id": 21,
+    "description": "Set goals, track progress, and celebrate milestones with friends.",
+    "size": 64,
+    "reviews": 924,
+    "ratingAvg": 4.5,
+    "downloads": 83000,
+    "ratings": [
+      { "name": "1 star", "count": 38 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 280 },
+      { "name": "5 star", "count": 406 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "CalmCast",
+    "companyName": "AudioAura",
+    "id": 22,
+    "description": "Stream calming ambient soundscapes for work, sleep, or meditation.",
+    "size": 85,
+    "reviews": 1730,
+    "ratingAvg": 4.9,
+    "downloads": 240000,
+    "ratings": [
+      { "name": "1 star", "count": 18 },
+      { "name": "2 star", "count": 27 },
+      { "name": "3 star", "count": 75 },
+      { "name": "4 star", "count": 280 },
+      { "name": "5 star", "count": 1330 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "CodeCrafter",
+    "companyName": "DevForge",
+    "id": 23,
+    "description": "Mobile IDE for developers who love coding anywhere, anytime.",
+    "size": 150,
+    "reviews": 640,
+    "ratingAvg": 4.2,
+    "downloads": 52000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 200 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/39bmmN3w/Demo-app-1.webp",
+    "title": "MindMaple",
+    "companyName": "CognitiveRoot",
+    "id": 24,
+    "description": "Visualize your ideas and brainstorm with powerful mind-map tools.",
+    "size": 72,
+    "reviews": 1430,
+    "ratingAvg": 4.6,
+    "downloads": 96000,
+    "ratings": [
+      { "name": "1 star", "count": 62 },
+      { "name": "2 star", "count": 89 },
+      { "name": "3 star", "count": 190 },
+      { "name": "4 star", "count": 370 },
+      { "name": "5 star", "count": 719 }
+    ]
+  }
+]
