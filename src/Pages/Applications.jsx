@@ -15,7 +15,7 @@ const Applications = () => {
 
   return (
     <div>
-      <div className='flex justify-between py-5 items-center'>
+      <div className='max-w-7xl mx-auto flex justify-between px-4 py-5 items-center'>
         <h1 className='text-3xl font-semibold'>
           All Applications{' '}
           <span className='text-sm text-gray-500'>
@@ -34,7 +34,7 @@ const Applications = () => {
       {loading ? (
         <LoadingSpinner count={16} />
       ) : (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+        <div className='max-w-7xl mx-6 lg:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
           {searchedApplications.map(application => (
             
             <ApplicationCard key={application.id} application={application} />

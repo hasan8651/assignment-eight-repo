@@ -3,10 +3,10 @@ import logoImg from '../assets/logo.png'
 
 const Footer = () => {
     return (
-        <footer className="footer md:footer-horizontal justify-center md:justify-between bg-purple-900 text-neutral-content p-4">
+        <footer className="footer md:footer-horizontal justify-center md:justify-between bg-purple-900 text-lg text-neutral-content mt-8 p-4">
   <aside className="grid-flow-col items-center">
     <img className='w-6 h-6' src={logoImg} alt="logo" />
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+    <p>HERO.IO  © {new Date().getFullYear()} - All rights reserved.</p>
   </aside>
   <nav className="grid-flow-col gap-4 place-self-center md:justify-self-end justify-center">
     <a>
