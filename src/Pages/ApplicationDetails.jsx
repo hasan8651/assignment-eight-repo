@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import useApplications from '../Hooks/useApplications';
-import { updateList } from '../Utils/localStorage';
+import { loadInstalled, updateList } from '../Utils/localStorage';
 import downloadsImg from '../assets/icon-downloads.png'
 import ratingImg from '../assets/icon-ratings.png'
 import reviewImg from '../assets/icon-review.png'
-import Footer from '../Components/Footer';
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+
 
 
 const ApplicationDetails = () => {
@@ -14,9 +15,32 @@ const { id } = useParams()
 
   const application = applications.find(a => a.id === Number(id))
 
+
+  const [isInstalled, setIsInstalled] = useState(false);
+
+// Check localStorage on mount
+useEffect(() => {
+  const stored = loadInstalled();
+  const installed = stored.some(app => app.id === Number(id));
+  setIsInstalled(installed);
+}, [id]);
+
+
+
   if (loading) return <p>Loading.......</p>
 
   const { title, image, ratingAvg, downloads, description, companyName, reviews, ratings, size } = application || {}
+
+
+
+
+  const data = ratings
+    .map(r => ({ name: r.name, count: r.count }))
+    .reverse();
+
+
+   
+
 
   return (
     
@@ -64,17 +88,62 @@ const { id } = useParams()
         
         </div>
 
-        <button onClick={() => updateList(application)} className="mt-6 bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-6 py-3 rounded-md cursor-pointer">
-          Install Now ({size} MB)
-        </button>
+        
+
+
+<button
+  onClick={() => {
+    if (isInstalled) return;
+    updateList(application);
+    setIsInstalled(true);
+  }}
+  disabled={isInstalled}
+  className={`mt-6 px-6 py-3 rounded-md font-medium transition-colors ${
+    isInstalled
+      ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
+      : 'cursor-pointer bg-[#00D390] text-white hover:bg-emerald-600'
+  }`}
+>
+  {isInstalled ? 'Installed' : `Install Now (${size} MB)`}
+</button>
+
       </div>
     </div>
 
   <div className='border-2 border-amber-600 w-full my-4'></div>
    
-      <h2 className="border-2 h-20 text-xl font-bold mb-4">Ratings</h2>
      
-      
+
+    <div className="w-full bg-white rounded-lg shadow-sm px-2 mt-4">
+      <h2 className="text-xl font-semibold mb-4 text-[#001931]">Ratings</h2>
+
+      <ResponsiveContainer width="100%" height={250}>
+        <BarChart
+          layout="vertical"
+          data={data}
+          margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e5e7eb" />
+          <XAxis type="number" axisLine={false} tickLine={false} stroke="#6b7280" />
+          <YAxis
+            dataKey="name"
+            type="category"
+            axisLine={false}
+            tickLine={false}
+            stroke="#6b7280"
+          />
+          <Tooltip cursor={{ fill: '#fef3c7' }} />
+          <Bar
+            dataKey="count"
+            fill="#f97316" /* orange-500 */
+            radius={[0, 6, 6, 0]}
+            barSize={20}
+          />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+     
+        <div className='border-2 border-amber-600 w-full my-4'></div>
 
   
     <div className="mt-14">

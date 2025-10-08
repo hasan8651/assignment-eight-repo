@@ -18,7 +18,7 @@ const { title, image, ratingAvg, downloads, id } = application
        <div className=''>
          <h2 className='card-title my-4 ml-2 text-[#001931]'>{title}</h2>
          <span className='flex my-4 justify-between'>
-         <p className='flex items-center bg-[#F1F5E8] text-[#00D390] gap-2 px-1'><img className='w-5' src={downloadsImg} alt="download-icon" /> {downloads}</p>
+         <p className='flex items-center bg-[#F1F5E8] text-[#00D390] gap-2 px-1'><img className='w-5' src={downloadsImg} alt="download-icon" /> {downloads}M</p>
             <p className='flex items-center bg-[#FFF0E1] text-[#FF8811] gap-2 px-1'><img className='w-5' src={ratingImg} alt="rating-icon" /> {ratingAvg}</p>
          </span>
         </div>

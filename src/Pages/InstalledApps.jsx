@@ -51,7 +51,7 @@ const InstalledApps = () => {
             value={sortOrder}
             onChange={e => setSortOrder(e.target.value)}
           >
-            <option disabled={true} value='none'>Sort by count</option>
+            <option disabled={true} value='none'>Sort by downloads</option>
             <option value='asc'>Low-&gt;High</option>
             <option value='desc'>High-&gt;Low</option>
           </select>
@@ -70,9 +70,6 @@ const InstalledApps = () => {
                />
              </figure>
           <div>
-{/* 
-<p className='flex items-center bg-[#F1F5E8]  gap-2 px-1'> {downloads}</p>
-<p className='flex items-center bg-[#FFF0E1]  gap-2 px-1'>< {ratingAvg}</p> */}
 
             <h3 class="text-xl font-semibold text-gray-800">{a.title}</h3>
             <div class="flex items-center space-x-4 mt-4 font-semibold text-gray-600">

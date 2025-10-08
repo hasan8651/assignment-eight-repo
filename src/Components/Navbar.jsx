@@ -4,7 +4,7 @@ import logoImg from '../assets/logo.png'
 
 const Navbar = () => {
     return (
-     <div className="navbar max-w-7xl px-4 mx-auto shadow-sm">
+     <div className="navbar max-w-7xl px-4 mx-auto shadow-2xs">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -14,41 +14,41 @@ const Navbar = () => {
         tabIndex={0}
         className="menu menu-md dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li>
-          <NavLink to="/" className='hover:bg-purple-600 hover:text-white' >
+          <NavLink to="/" className='hover:bg-[#632EE3] hover:text-white' >
           Home
         </NavLink>
         </li>
         <li>
-          <NavLink to="/applications" className='hover:bg-purple-600 hover:text-white' >
+          <NavLink to="/applications" className='hover:bg-[#632EE3] hover:text-white' >
           Apps
         </NavLink>
         </li>
         <li>
-          <NavLink to="/installed" className='hover:bg-purple-600 hover:text-white'>
+          <NavLink to="/installed" className='hover:bg-[#632EE3] hover:text-white'>
          Installation
         </NavLink>
         </li>
       </ul>
     </div>
-    <Link className="flex justify-center items-center text-xl font-bold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent" to='/'>
-    <img className='w-6 h-6' src={logoImg} alt="logo" />
+    <Link className="flex justify-center items-center text-2xl font-bold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent" to='/'>
+    <img className='w-8 h-8' src={logoImg} alt="logo" />
     HERO.IO
     </Link>
   </div>
   <div className="navbar-center hidden md:flex">
     <ul className="menu menu-horizontal px-1 font-semibold">
       <li>
-        <NavLink to="/" className={({isActive}) => isActive ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent underline decoration-[#632EE3]" : "text-black"}>
+        <NavLink to="/" className={({isActive}) => isActive ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent underline decoration-[#632EE3]" : "text-[#001931]"}>
           Home
         </NavLink>
       </li>
         <li>
-             <NavLink to="/applications" className={({isActive}) => isActive ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent underline decoration-[#632EE3]" : "text-black"}>
+             <NavLink to="/applications" className={({isActive}) => isActive ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent underline decoration-[#632EE3]" : "text-[#001931]"}>
           Apps
         </NavLink>
         </li>
         <li>
-            <NavLink to="/installed" className={({isActive}) => isActive ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent underline decoration-[#632EE3]" : "text-black"}>
+            <NavLink to="/installed" className={({isActive}) => isActive ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent underline decoration-[#632EE3]" : "text-[#001931]"}>
          Installation
         </NavLink>
         </li>

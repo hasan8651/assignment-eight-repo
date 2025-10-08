@@ -14,7 +14,7 @@ export const updateList = application => {
 
   try {
     const isDuplicate = installed.some(a => a.id === application.id)
-    if (isDuplicate) return alert('Already added in installed')
+    if (isDuplicate) return 
     const updatedInstalled = [...installed, application]
     localStorage.setItem('installed', JSON.stringify(updatedInstalled))
   } catch (err) {
@@ -31,3 +31,5 @@ export const removeFromInstalled = id => {
     console.log(err)
   }
 }
+
+

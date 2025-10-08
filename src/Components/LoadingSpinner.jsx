@@ -3,7 +3,7 @@ import React from 'react';
 const LoadingSpinner = () => {
     return (
         <div>
-            <p className='text-5xl'>Loading.......</p>
+        <div className="skeleton h-32 w-32"></div>
         </div>
     );
 };

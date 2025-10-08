@@ -24,13 +24,15 @@ const { loading, error, applications } = useApplications()
     </p>
 
     <div className="mt-8 flex justify-center gap-4 font-semibold text-xl">
-      <button className="text-[#001931] border border-gray-300 shadow px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white">
+      <a href="https://play.google.com/store/apps"><button className="text-[#001931] border border-gray-300 shadow px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white">
         <img src={playStore} alt="Google Play" className="h-6" />Google Play
-      </button>
-      <button className="text-[#001931] border border-gray-300 shadow px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white">
+      </button></a>
+      <a href="https://www.apple.com/app-store/"><button className="text-[#001931] border border-gray-300 shadow px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white">
         <img src={appStore} alt="App Store" className="h-6" />App Store
-      </button>
+      </button></a>
     </div>
+
+
 
     <div className="mt-10 flex justify-center">
       <img src={heroImg} alt="App Mockup" className="w-72 md:w-130 shadow-lg" />

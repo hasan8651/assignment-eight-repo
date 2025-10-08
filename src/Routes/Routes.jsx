@@ -6,6 +6,7 @@ import LoadingSpinner from "../Components/LoadingSpinner";
 import Applications from "../Pages/Applications";
 import InstalledApps from "../Pages/InstalledApps";
 import ApplicationDetails from "../Pages/ApplicationDetails";
+import ErrorApps from "../Pages/ErrorApps";
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/application/:id',
+        errorElement:<ErrorApps/>,
         element: <ApplicationDetails />,
       },
     ],

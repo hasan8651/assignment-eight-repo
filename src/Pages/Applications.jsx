@@ -50,7 +50,7 @@ const Applications = () => {
         </label>
       </div>
       {loading ? (
-        <LoadingSpinner count={16} />
+        <LoadingSpinner  />
       ) : (
         <div className='max-w-7xl mx-6 lg:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
           {searchedApplications.map(application => (

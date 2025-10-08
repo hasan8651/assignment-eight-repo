@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer md:footer-horizontal justify-center md:justify-between bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-lg text-neutral-content mt-8 p-4">
   <aside className="grid-flow-col items-center">
-    <img className='w-6 h-6' src={logoImg} alt="logo" />
+    <img className='w-8 h-8' src={logoImg} alt="logo" />
     <p>HERO.IO  © {new Date().getFullYear()} - All rights reserved.</p>
   </aside>
   <nav className="grid-flow-col gap-4 place-self-center md:justify-self-end justify-center">
