@@ -17,16 +17,16 @@ const Applications = () => {
     <div>
 
  <h1 className='text-2xl md:text-3xl mt-8 mb-2 font-semibold text-center text-[#001931]'>Our All Applications</h1>
-       <p className='md:text-[16px] text-[14px] text-[#627382] text-center'>Explore All Apps on the Market developed by us. We code for Millions</p>
+       <p className='md:text-[16px] text-[12px] text-[#627382] text-center'>Explore All Apps on the Market developed by us. We code for Millions</p>
 
       <div className='max-w-7xl mx-auto flex justify-between px-4 py-5 items-center'>
         <h1 className='text-lg md:text-xl font-semibold text-[#001931]'>
           {' '}
           <span className=''>
-            ({searchedApplications.length}) Apps Found.
+            ({searchedApplications.length}) Apps Found
           </span>
         </h1>
-        <label className='input font-semibold w-60 md:w-80'>
+        <label className='input font-semibold w-50 md:w-80'>
 
  <svg className="h-[1.5em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <g

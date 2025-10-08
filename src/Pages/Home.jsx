@@ -18,7 +18,7 @@ const { loading, error, applications } = useApplications()
     <h1 className="text-4xl md:text-5xl font-bold text-[#001931] ">
       We Build <br /> <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">Productive</span> Apps
     </h1>
-    <p className="mt-4 text-[#627382] max-w-[790px] mx-auto">
+    <p className="mt-4 text-[#627382] max-w-[810px] px-3 mx-auto">
       At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.
       Our goal is to turn your ideas into digital experiences that truly make an impact.
     </p>

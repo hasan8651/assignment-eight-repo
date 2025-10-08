@@ -1,13 +1,100 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { loadInstalled, removeFromInstalled } from '../Utils/localStorage';
+import downloadsImg from '../assets/icon-downloads.png'
+import ratingImg from '../assets/icon-ratings.png'
 
 const InstalledApps = () => {
-    return (
-        <div>
-            <h2 className='text-4xl'>Installed Apps</h2>
-        </div>
+ 
+ const [installed, setInstalled] = useState(() => loadInstalled())
+  const [sortOrder, setSortOrder] = useState('none')
 
+  if (!installed.length) return <p className='text-2xl md:text-3xl mt-8 mb-2 font-semibold text-center text-[#001931]'>No Apps Available</p>
+  
+
+  const sortedItem = (() => {
+    if (sortOrder === 'asc') {
+      return [...installed].sort((x, y) => x.downloads - y.downloads)
+    } else if (sortOrder === 'desc') {
+      return [...installed].sort((x, y) => y.downloads - x.downloads)
+    } else {
+      return installed
+    }
+  })()
+
+  const handleRemove = id => {
+   removeFromInstalled (id)
+   
+    setInstalled(prev => prev.filter(a => a.id !== id))
+  }
+
+  return (
+    <div>
+
+
+
+ <h1 className='text-2xl md:text-3xl mt-8 mb-2 font-semibold text-center text-[#001931]'>Your Installed Apps</h1>
+       <p className='md:text-[16px] text-[14px] text-[#627382] text-center'>Explore All Trending Apps on the Market developed by us</p>
+
+      <div className='max-w-7xl mx-auto flex justify-between px-4 py-5 items-center'>
+                      
+        <h1 className='text-lg md:text-xl font-semibold text-[#001931]'>
         
-    );
+          {' '}
+          <span className=''>
+            {sortedItem.length} Apps Found
+          </span>
+        </h1>
+
+        <label className='form-control font-semibold w-40 md:w-60'>
+          <select
+            className='select text-[#627382] select-bordered'
+            value={sortOrder}
+            onChange={e => setSortOrder(e.target.value)}
+          >
+            <option disabled={true} value='none'>Sort by count</option>
+            <option value='asc'>Low-&gt;High</option>
+            <option value='desc'>High-&gt;Low</option>
+          </select>
+        </label>
+      </div>
+     
+ <div className='space-y-3'>
+    {sortedItem.map(a => (
+     <div key={a.id} className="max-w-7xl mx-auto flex items-center justify-between bg-white rounded-lg p-4 shadow-md">
+        <div class="flex items-center space-x-4">
+          <figure className='rounded-md overflow-hidden'>
+              <img
+                 className='w-20 h-20 object-cover'
+                src={a.image}
+                 alt="image"
+               />
+             </figure>
+          <div>
+{/* 
+<p className='flex items-center bg-[#F1F5E8]  gap-2 px-1'> {downloads}</p>
+<p className='flex items-center bg-[#FFF0E1]  gap-2 px-1'>< {ratingAvg}</p> */}
+
+            <h3 class="text-xl font-semibold text-gray-800">{a.title}</h3>
+            <div class="flex items-center space-x-4 mt-4 font-semibold text-gray-600">
+              <span class="flex items-center gap-1 text-[#00D390]"><img className='w-4' src={downloadsImg} alt="download-icon" />{a.downloads}</span>
+              <span class="flex items-center gap-1 text-[#FF8811] font-medium"><img className='w-4' src={ratingImg} alt="rating-icon" />{a.ratingAvg}</span>
+              <span className='text-[#627382]'>{a.size} MB</span>
+            </div>
+          </div>
+        </div>
+        <button onClick={() => handleRemove(a.id)} className="bg-[#00D390] text-white px-4 py-2 rounded font-medium hover:bg-emerald-600 cursor-pointer">
+          Uninstall
+        </button>
+      </div>
+      )
+ 
+    )
+    }
+    </div>
+    </div>
+   
+  )
+
 };
 
 export default InstalledApps;

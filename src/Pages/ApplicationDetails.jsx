@@ -1,11 +1,97 @@
 import React from 'react';
+import { useParams } from 'react-router';
+import useApplications from '../Hooks/useApplications';
+import { updateList } from '../Utils/localStorage';
+import downloadsImg from '../assets/icon-downloads.png'
+import ratingImg from '../assets/icon-ratings.png'
+import reviewImg from '../assets/icon-review.png'
+import Footer from '../Components/Footer';
+
 
 const ApplicationDetails = () => {
-    return (
-        <div>
-            <h2 className='text-4xl'> Application Details</h2>
+const { id } = useParams()
+  const { applications, loading } = useApplications()
+
+  const application = applications.find(a => a.id === Number(id))
+
+  if (loading) return <p>Loading.......</p>
+
+  const { title, image, ratingAvg, downloads, description, companyName, reviews, ratings, size } = application || {}
+
+  return (
+    
+
+
+
+<div className="my-4 px-4 max-w-7xl mx-auto">
+   
+    <div className="md:flex gap-20 items-center bg-white shadow-sm rounded-lg py-4">
+      
+        <img src={image} alt="app image"  />
+      
+
+      <div>
+        <h1 className="text-2xl md:text-3xl font-bold text-[#001931]">{title}</h1>
+        <p className="text-[#627382] mt-1">Developed by <span className="text-[#632EE3] font-semibold">{companyName}</span></p>
+
+<div className='border border-amber-600 my-4'></div>
+
+
+        <div className="mt-6 flex items-center gap-5 md:gap-10">
+
+
+          <div>
+          <img className='w-8' src={downloadsImg} alt="download-icon" /> 
+          <p className="text-[#627382]">Downloads</p>
+          <p className="text-xl md:text-3xl font-bold text-[#001931]">{downloads}M</p>
+          </div>
+
+
+          <div>
+          <img className='w-8' src={ratingImg} alt="rating-icon" /> 
+          <p className="text-[#627382] ">Average Ratings</p>
+          <p className="text-xl md:text-3xl font-bold text-[#001931]">{ratingAvg}</p>
+          </div>
+
+          <div>
+          <img className='w-8' src={reviewImg} alt="review-icon" /> 
+          <p className="text-[#627382] ">Total Reviews</p>
+          <p className="text-xl md:text-3xl font-bold text-[#001931]">{reviews}K</p>
+          </div>
+
+
+        
+        
         </div>
-    );
+
+        <button onClick={() => updateList(application)} className="mt-6 bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-6 py-3 rounded-md cursor-pointer">
+          Install Now ({size} MB)
+        </button>
+      </div>
+    </div>
+
+  <div className='border-2 border-amber-600 w-full my-4'></div>
+   
+      <h2 className="border-2 h-20 text-xl font-bold mb-4">Ratings</h2>
+     
+      
+
+  
+    <div className="mt-14">
+      <h2 className="text-xl text-[#001931] font-bold mb-2">Description</h2>
+      <div className="space-y-5 text-[#627382]">
+        <p style={{ whiteSpace: "pre-line" }}>
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  )
 };
 
 export default ApplicationDetails;
