@@ -3,6 +3,9 @@ import { Link } from 'react-router';
 import LoadingSpinner from '../Components/LoadingSpinner';
 import ApplicationCard from '../Components/ApplicationCard';
 import useApplications from '../Hooks/useApplications';
+import playStore from '../assets/playstore.png'
+import appStore from '../assets/appstore.png'
+import heroImg from '../assets/hero.png'
 
 const Home = () => {
 
@@ -12,30 +15,30 @@ const { loading, error, applications } = useApplications()
 
     return (
     <div className="text-center py-8 ">
-    <h1 className="text-4xl md:text-5xl font-bold  ">
-      We Build <br /> <span className="text-purple-600">Productive</span> Apps
+    <h1 className="text-4xl md:text-5xl font-bold text-[#001931] ">
+      We Build <br /> <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">Productive</span> Apps
     </h1>
-    <p className="mt-4 text-gray-500 max-w-2xl mx-auto">
+    <p className="mt-4 text-[#627382] max-w-[790px] mx-auto">
       At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.
       Our goal is to turn your ideas into digital experiences that truly make an impact.
     </p>
 
     <div className="mt-8 flex justify-center gap-4 font-semibold text-xl">
-      <button className="border border-gray-300 shadow px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-400">
-        <img src="/src/assets/playstore.png" alt="Google Play" className="h-6" />Google Play
+      <button className="text-[#001931] border border-gray-300 shadow px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white">
+        <img src={playStore} alt="Google Play" className="h-6" />Google Play
       </button>
-      <button className="border border-gray-300 shadow px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-400">
-        <img src="/src/assets/appstore.png" alt="App Store" className="h-6" />App Store
+      <button className="text-[#001931] border border-gray-300 shadow px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-gradient-to-r from-[#632EE3] to-[#9F62F2] hover:text-white">
+        <img src={appStore} alt="App Store" className="h-6" />App Store
       </button>
     </div>
 
     <div className="mt-10 flex justify-center">
-      <img src="/src/assets/hero.png" alt="App Mockup" className="w-72 md:w-130 shadow-lg" />
+      <img src={heroImg} alt="App Mockup" className="w-72 md:w-130 shadow-lg" />
     </div>
   
 
 
-  <div className=" bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-center py-2 md:py-12">
+  <div className=" bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white text-center py-2 md:py-12">
     <h2 className="text-2xl md:text-3xl font-semibold mb-8">Trusted By Millions, Built For You</h2>
     <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12">
       <div>
@@ -58,9 +61,9 @@ const { loading, error, applications } = useApplications()
 
 
  <div>
-      <div className='flex justify-center py-5 items-center'>
-        <h1 className='text-3xl font-semibold text-center'>Trending Applications</h1>
-       
+      <div className='justify-center py-5 items-center'>
+        <h1 className='text-2xl md:text-3xl mb-2 font-semibold text-center text-[#001931]'>Trending Apps</h1>
+       <p className='text-[#627382] text-center'>Explore All Trending Apps on the Market developed by us</p>
       </div>
       {loading ? (
         <LoadingSpinner />
@@ -73,7 +76,7 @@ const { loading, error, applications } = useApplications()
         
       )}
     </div>
- <Link className='btn btn-outline mt-6 bg-purple-600 text-white' to='/applications'>
+ <Link className='btn btn-outline mt-6 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white' to='/applications'>
           Show All
         </Link>
     </div>
