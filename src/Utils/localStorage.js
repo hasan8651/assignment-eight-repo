@@ -1,4 +1,3 @@
-
 export const loadInstalled = () => {
   try {
     const data = localStorage.getItem('installed')
@@ -11,7 +10,6 @@ export const loadInstalled = () => {
 
 export const updateList = application => {
   const installed = loadInstalled()
-
   try {
     const isDuplicate = installed.some(a => a.id === application.id)
     if (isDuplicate) return 
@@ -31,5 +29,3 @@ export const removeFromInstalled = id => {
     console.log(err)
   }
 }
-
-
