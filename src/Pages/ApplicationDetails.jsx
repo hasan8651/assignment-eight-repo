@@ -6,6 +6,8 @@ import downloadsImg from '../assets/icon-downloads.png'
 import ratingImg from '../assets/icon-ratings.png'
 import reviewImg from '../assets/icon-review.png'
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import LoadingSpinner from '../Components/LoadingSpinner';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 
@@ -18,7 +20,7 @@ const { id } = useParams()
 
   const [isInstalled, setIsInstalled] = useState(false);
 
-// Check localStorage on mount
+
 useEffect(() => {
   const stored = loadInstalled();
   const installed = stored.some(app => app.id === Number(id));
@@ -27,7 +29,7 @@ useEffect(() => {
 
 
 
-  if (loading) return <p>Loading.......</p>
+  if (loading) return <LoadingSpinner/>
 
   const { title, image, ratingAvg, downloads, description, companyName, reviews, ratings, size } = application || {}
 
@@ -49,16 +51,16 @@ useEffect(() => {
 
 <div className="my-4 px-4 max-w-7xl mx-auto">
    
-    <div className="md:flex gap-20 items-center bg-white shadow-sm rounded-lg py-4">
+    <div className="md:flex gap-20 items-center py-4">
       
-        <img src={image} alt="app image"  />
+        <img className='shadow rounded-md' src={image} alt="app image"  />
       
 
       <div>
         <h1 className="text-2xl md:text-3xl font-bold text-[#001931]">{title}</h1>
         <p className="text-[#627382] mt-1">Developed by <span className="text-[#632EE3] font-semibold">{companyName}</span></p>
 
-<div className='border border-amber-600 my-4'></div>
+<div className='border border-[#627382] my-4'></div>
 
 
         <div className="mt-6 flex items-center gap-5 md:gap-10">
@@ -96,6 +98,7 @@ useEffect(() => {
     if (isInstalled) return;
     updateList(application);
     setIsInstalled(true);
+    toast.success('Application Installed Successfully!');
   }}
   disabled={isInstalled}
   className={`mt-6 px-6 py-3 rounded-md font-medium transition-colors ${
@@ -110,11 +113,11 @@ useEffect(() => {
       </div>
     </div>
 
-  <div className='border-2 border-amber-600 w-full my-4'></div>
+  <div className='border border-[#627382] w-full my-4'></div>
    
      
 
-    <div className="w-full bg-white rounded-lg shadow-sm px-2 mt-4">
+    <div className="w-full px-2 mt-4">
       <h2 className="text-xl font-semibold mb-4 text-[#001931]">Ratings</h2>
 
       <ResponsiveContainer width="100%" height={250}>
@@ -135,7 +138,7 @@ useEffect(() => {
           <Tooltip cursor={{ fill: '#fef3c7' }} />
           <Bar
             dataKey="count"
-            fill="#f97316" /* orange-500 */
+            fill="#f97316"
             radius={[0, 6, 6, 0]}
             barSize={20}
           />
@@ -143,7 +146,7 @@ useEffect(() => {
       </ResponsiveContainer>
     </div>
      
-        <div className='border-2 border-amber-600 w-full my-4'></div>
+        <div className='border border-[#627382] w-full my-4'></div>
 
   
     <div className="mt-14">
@@ -154,6 +157,7 @@ useEffect(() => {
         </p>
       </div>
     </div>
+    <ToastContainer position="top-right" autoClose={2000}></ToastContainer>
   </div>
 
 

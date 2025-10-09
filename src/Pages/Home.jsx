@@ -35,28 +35,28 @@ const { loading, error, applications } = useApplications()
 
 
     <div className="mt-10 flex justify-center">
-      <img src={heroImg} alt="App Mockup" className="w-72 md:w-130 shadow-lg" />
+      <img src={heroImg} alt="hero image" className="w-72 md:w-130" />
     </div>
   
 
 
   <div className=" bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white text-center py-2 md:py-12">
     <h2 className="text-2xl md:text-3xl font-semibold mb-8">Trusted By Millions, Built For You</h2>
-    <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-12">
+    <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
       <div>
-        <p className="text-4xl font-bold">29.6M</p>
-        <p>Total Downloads</p>
-        <p className="text-sm text-gray-200">21% More Than Last Month</p>
+        <p className='text-xs text-gray-300'>Total Downloads</p>
+        <p className="text-4xl font-bold my-2">29.6M</p>
+        <p className="text-xs text-gray-300">21% More Than Last Month</p>
       </div>
       <div>
-        <p className="text-4xl font-bold">906K</p>
-        <p>Total Reviews</p>
-        <p className="text-sm text-gray-200">46% More Than Last Month</p>
+        <p className='text-xs text-gray-300'>Total Reviews</p>
+        <p className="text-4xl font-bold my-2">906K</p>
+        <p className="text-xs text-gray-300">46% More Than Last Month</p>
       </div>
       <div>
-        <p className="text-4xl font-bold">132+</p>
-        <p>Active Apps</p>
-        <p className="text-sm text-gray-200">31 More Will Launch</p>
+        <p className='text-xs text-gray-300'>Active Apps</p>
+        <p className="text-4xl font-bold my-2">132+</p>
+        <p className="text-xs text-gray-300">31 More Will Launch</p>
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@ const { loading, error, applications } = useApplications()
       {loading ? (
         <LoadingSpinner />
       ) : (
-        <div className='max-w-7xl mx-6 lg:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+        <div className='max-w-screen px-8 mx-6 lg:mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
           {trendingApplications.map(application => (
             <ApplicationCard key={application.id} application={application} />
           ))}

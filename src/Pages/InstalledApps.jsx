@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { loadInstalled, removeFromInstalled } from '../Utils/localStorage';
 import downloadsImg from '../assets/icon-downloads.png'
 import ratingImg from '../assets/icon-ratings.png'
+import { toast, ToastContainer } from 'react-toastify';
 
 const InstalledApps = () => {
  
  const [installed, setInstalled] = useState(() => loadInstalled())
   const [sortOrder, setSortOrder] = useState('none')
 
-  if (!installed.length) return <p className='text-2xl md:text-3xl mt-8 mb-2 font-semibold text-center text-[#001931]'>No Apps Available</p>
-  
 
   const sortedItem = (() => {
     if (sortOrder === 'asc') {
@@ -22,6 +21,7 @@ const InstalledApps = () => {
   })()
 
   const handleRemove = id => {
+    toast.success('Application Uninstalled Successfully!');
    removeFromInstalled (id)
    
     setInstalled(prev => prev.filter(a => a.id !== id))
@@ -47,7 +47,7 @@ const InstalledApps = () => {
 
         <label className='form-control font-semibold w-40 md:w-60'>
           <select
-            className='select text-[#627382] select-bordered'
+            className='select text-[#627382] bg-[#F5F5F5] select-bordered'
             value={sortOrder}
             onChange={e => setSortOrder(e.target.value)}
           >
@@ -57,10 +57,16 @@ const InstalledApps = () => {
           </select>
         </label>
       </div>
-     
+      <ToastContainer position="top-right" autoClose={2000}></ToastContainer>
+
+     {sortedItem.length === 0 ? (
+        <p className="text-2xl md:text-3xl mt-8 mb-2 font-semibold text-center text-[#001931]">
+          No Apps Available
+        </p>
+      ) : (
  <div className='space-y-3'>
     {sortedItem.map(a => (
-     <div key={a.id} className="max-w-7xl mx-auto flex items-center justify-between bg-white rounded-lg p-4 shadow-md">
+     <div key={a.id} className="max-w-7xl mx-4 md:mx-auto flex items-center justify-between bg-white rounded-lg p-4 shadow-md">
         <div class="flex items-center space-x-4">
           <figure className='rounded-md overflow-hidden'>
               <img
@@ -71,8 +77,8 @@ const InstalledApps = () => {
              </figure>
           <div>
 
-            <h3 class="text-xl font-semibold text-gray-800">{a.title}</h3>
-            <div class="flex items-center space-x-4 mt-4 font-semibold text-gray-600">
+            <h3 class="text-xl font-semibold text-[#001931]">{a.title}</h3>
+            <div class="flex items-center space-x-4 mt-4 font-semibold text-[#627382]">
               <span class="flex items-center gap-1 text-[#00D390]"><img className='w-4' src={downloadsImg} alt="download-icon" />{a.downloads}</span>
               <span class="flex items-center gap-1 text-[#FF8811] font-medium"><img className='w-4' src={ratingImg} alt="rating-icon" />{a.ratingAvg}</span>
               <span className='text-[#627382]'>{a.size} MB</span>
@@ -88,6 +94,7 @@ const InstalledApps = () => {
     )
     }
     </div>
+     )} 
     </div>
    
   )
