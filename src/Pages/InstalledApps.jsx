@@ -25,6 +25,8 @@ const InstalledApps = () => {
     setInstalled(prev => prev.filter(a => a.id !== id))
   }
 
+  const foundText = sortedItem.length === 0 ? 'No Apps Found' : `(${sortedItem.length}) Apps Found`;
+
   return (
     
 <div>
@@ -32,10 +34,7 @@ const InstalledApps = () => {
   <p className='md:text-[16px] text-[14px] text-[#627382] text-center'>Explore All Trending Apps on the Market developed by us</p>
   <div className='max-w-7xl mx-auto flex justify-between px-4 py-5 items-center'>
     <h1 className='text-lg md:text-xl font-semibold text-[#001931]'>
-      {' '}
-      <span>
-        {sortedItem.length} Apps Found
-      </span>
+    {foundText}
     </h1>
 
     <label className='form-control font-semibold w-40 md:w-60'>
@@ -53,7 +52,7 @@ const InstalledApps = () => {
   <ToastContainer position='top-right' autoClose={2000}></ToastContainer>
 
   {sortedItem.length === 0 ? (
-    <p className='text-2xl md:text-3xl mt-8 mb-2 font-semibold text-center text-[#001931]'>No Apps Available</p>
+    <p className='text-2xl md:text-3xl mt-8 mb-2 font-semibold text-center text-[#001931]'>No Installed Applications Available</p>
     ) : (
       <div className='space-y-3'>
         {sortedItem.map(a => (

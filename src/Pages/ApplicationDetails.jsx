@@ -86,7 +86,7 @@ return (
   <BarChart
     layout='vertical'
     data={data}
-     margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
+    margin={{ top: 5, right: 30, left: 0, bottom: 5 }}
   >
     <CartesianGrid strokeDasharray='3 3' vertical={false} stroke='#e5e7eb' />
     <XAxis type='number' axisLine={false} tickLine={false} stroke='#6b7280' />
